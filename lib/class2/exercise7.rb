@@ -29,3 +29,19 @@
 #     Returns a new String of length Integer with `string` right justified.
 #
 #     'bird'.rjust(10)  #=> '      bird'
+
+line_width = 50
+
+contents = 'Table of Contents'
+puts(contents.center(line_width))
+
+chapter1 = 'Chapter 1: Getting Started'
+page1 = 'page 1'
+puts(chapter1.ljust(line_width / 2) + page1.rjust(line_width - 10))
+chapter2 = 'Chapter 2: Numbers'
+page9 = 'page 9'
+puts(chapter2.ljust(line_width / 2) + page9.rjust(line_width - 9))
+
+chapter3 = 'Chapter 3: Letters'
+page13 = 'page 13'
+puts(chapter3.ljust(line_width / 2) + page13.rjust(line_width - 8))
