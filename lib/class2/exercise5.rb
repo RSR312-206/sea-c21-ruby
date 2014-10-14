@@ -11,10 +11,8 @@
 #   That's ok, I guess, but isn't 43 just a bit better?
 
 puts 'What\'s your favorite number?'
-fav_number = gets.chomp
+fav_number = gets.chomp.to_i
 
-puts 'That\'s ok, I guess, but isn\'t '
+fav_number += 1
 
-puts fav_number.to_i + 1
-
-puts 'just a bit better?'
+puts "That\'s ok, I guess, but isn\'t #{fav_number} just a bit better?"
