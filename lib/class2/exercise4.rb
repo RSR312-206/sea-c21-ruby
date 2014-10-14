@@ -24,6 +24,3 @@ puts 'What\'s your last name?'
 last_name = gets.chomp
 
 puts "Nice to meet you #{first_name} #{mid_name} #{last_name}."
-
-#num_cars= 2
-#puts "I own #{num_cars} cars."
