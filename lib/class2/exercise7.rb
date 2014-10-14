@@ -30,7 +30,6 @@
 #
 #     'bird'.rjust(10)  #=> '      bird'
 
-
 contents = 'Table of Contents'
 puts(contents.center(50))
 
