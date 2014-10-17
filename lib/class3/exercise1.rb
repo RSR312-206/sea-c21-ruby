@@ -17,7 +17,7 @@
 #
 # TIP: I expect you to use a loop.
 
-total = bottles = 3
+bottles = 3
 
 loop do
   puts "#{bottles} bottles of beer on the wall, #{bottles} bottles of beer!"
@@ -26,8 +26,8 @@ loop do
   puts "Take one down, pass it around, #{bottles} bottles of beer on the wall!"
 end
 
-puts "Take one down, pass it around, 1 bottle of beer on the wall!"
-puts "1 bottle of beer on the wall, 1 bottle of beer!"
-puts "Take one down, pass it around, no more bottles of beer on the wall!"
-puts "No more bottles of beer on the wall, no more bottles of beer!"
-puts "Go to the store and buy some more, 3 bottles of beer on the wall!"
+puts 'Take one down, pass it around, 1 bottle of beer on the wall!'
+puts '1 bottle of beer on the wall, 1 bottle of beer!'
+puts 'Take one down, pass it around, no more bottles of beer on the wall!'
+puts 'No more bottles of beer on the wall, no more bottles of beer!'
+puts 'Go to the store and buy some more, 3 bottles of beer on the wall!'
