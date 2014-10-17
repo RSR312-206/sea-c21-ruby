@@ -10,8 +10,18 @@
 #
 # Hint: I've already structured your program. Aren't you lucky? :)
 
+
 def ask(question)
-  question # replace me
+ loop do
+    puts question
+
+    answer = gets.chomp
+
+    return 'We can be friends!' if answer == 'y'
+    return 'Get out of my sight!' if answer == 'n'
+
+    puts 'Try Again'
+  end
 end
 
-puts ask('Do you like eating tacos?')
+puts ask('Do you like eating tacos? (y or n)')

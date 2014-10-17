@@ -10,15 +10,8 @@
 #   i want a raise
 #   WHADDAYA MEAN 'I WANT A RAISE'?!? YOU'RE FIRED!!
 
-intro = 'You\'ve got 2 seconds, Routson!!'
+puts "CAN'T YOU SEE I'M BUSY?! MAKE IT FAST, JOHNSON!".upcase
 
-puts intro.upcase
+statement = gets.chomp
 
-statement = 'Hey boss, I drank all your diet coke...on purpose'
-
-puts statement
-
-boss_answer = 'You greedy bastard. My mother bought me those diet cokes,' \
-'youre\'re fired!!!'
-
-puts boss_answer.upcase
+puts "WHADDAYA MEAN '#{statement}'?!? YOU'RE FIRED!!".upcase

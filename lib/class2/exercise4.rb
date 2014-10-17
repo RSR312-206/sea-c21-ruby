@@ -23,4 +23,4 @@ mid_name = gets.chomp
 puts 'What\'s your last name?'
 last_name = gets.chomp
 
-puts "Nice to meet you #{first_name} #{mid_name} #{last_name}."
+puts "Nice to meet you, #{first_name} #{mid_name} #{last_name}."
