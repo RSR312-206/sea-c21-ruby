@@ -34,7 +34,7 @@
 #   Nana: BYE SWEETIE!
 
 bye = 0
-puts 'Nana: HI SWEETIE! GIT NANA A KISS!'
+puts 'Nana: HI SWEETIE! GIVE NANA A KISS!'
 
 loop do
   response = gets.chomp
@@ -43,16 +43,16 @@ loop do
     bye += 1
     break if bye == 3
 
-    puts "Nana: HOW'S SCHOOL GOING"
+    puts "Nana: HOW'S SCHOOL GOING?"
   else
-   bye = 0
+    bye = 0
 
-  if response == response.uppercase
-    puts " Nana: NOT SINCE #{rand(21) + 1930}!"
-  else
-    puts 'Nana: HUH?! SPEAK UP, SWEETIE'
-   end
- end
+    if response == response.upcase
+      puts "Nana: NOT SINCE #{rand(21) + 1930}!"
+    else
+      puts 'Nana: HUH?! SPEAK UP, SWEETIE!'
+    end
+  end
 end
 
-puts 'Nana: BYE SWEETIE'
+puts 'Nana: BYE SWEETIE!'
