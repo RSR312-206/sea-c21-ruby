@@ -13,3 +13,16 @@
 # Chapter 1:  Getting Started                page  1
 # Chapter 2:  Numbers                        page  9
 # Chapter 3:  Letters                        page 13
+
+puts('Table of Contents'.center(50))
+
+contents = [
+  'Chapter 1:  Getting Started', 'page  1',
+  'Chapter 2:  Numbers', 'page  9', 'Chapter 3:  Letters', 'page 13'
+]
+
+puts(contents[0].ljust(27) + contents[1].rjust(23))
+
+puts(contents[2].ljust(27) + contents[3].rjust(23))
+
+puts(contents[4].ljust(27) + contents[5].rjust(23))

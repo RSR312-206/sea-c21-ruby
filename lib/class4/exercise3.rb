@@ -10,7 +10,6 @@
 #
 # Hint: I've already structured your program. Aren't you lucky? :)
 
-
 def ask(question)
  loop do
     puts question

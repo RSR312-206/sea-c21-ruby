@@ -23,7 +23,8 @@
 #   IX
 
 def modern_roman_numeral(num)
-  num # replace me
+  M = 1000
+  num [ ]
 end
 
 input = ARGV[0].to_i

@@ -26,3 +26,16 @@
 #
 # Hint: There's a lovely array method that will give you a sorted version of
 # an array called `sort`. Use it!
+
+fruits = []
+input = ' '
+puts 'Give me some words, and I will sort them:'
+
+while input != ''
+  input = gets.chomp
+  fruits.push(input)
+end
+
+puts 'Sweet! Here they are, sorted:'
+
+puts fruits.sort

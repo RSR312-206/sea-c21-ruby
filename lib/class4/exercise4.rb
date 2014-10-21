@@ -36,8 +36,17 @@
 #   VIIII
 
 def old_school_roman_numeral(num)
-  num # replace me
-end
+  num = [1, 5, 10, 50, 100, 500, 1000]
+  roman = ['I', 'V', 'x', 'L', 'C', 'D', 'M']
+  roman_numeral = ''
+  i = 0
+
+while i <= 6
+  while num <= i
+    num = num - roman[i]
+    roman_numeral = roman_numeral - num[i]
+  end
+ i = i + 1
 
 input = ARGV[0].to_i
 
