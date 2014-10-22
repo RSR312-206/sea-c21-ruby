@@ -22,11 +22,11 @@
 require 'yaml'
 
 def database
-  '/replace/me'
+  File.dirname(File.absolute_path(__FILE__)) + '/database.yml'
 end
 
 def load
-  ['fix me']
+  YAML::load(File.read('database.yml'))
 end
 
 records = load

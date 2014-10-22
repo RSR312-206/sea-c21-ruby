@@ -1,6 +1,7 @@
 # The secret of getting ahead is getting started.
 # - Mark Twain
 
+=begin
 names = ['Ada', 'Belle', 'Chris']
 
 puts names
@@ -79,7 +80,8 @@ while true
   else
     puts 'Please answer yes or no'
   end
-end
+end=end
+
 
 =begin
 def double_this num
@@ -90,26 +92,73 @@ end
 double_this 44
 =end
 
-def old_roman_numeral num
-  values =   [1000,500, 100, 50, 10, 5, 1]
-  numerals = ["M", "D", "C", "L", "X", "V", "I"]
-  roman_numeral = ""
-  i = 0
+#ex 1
+loop do
+  word = gets.chomp
+  break of word.empty?
+  words.push(word)
+end
 
-  while i <= 6
-    while num >= values[i]
-      num = num - values[i]
-      roman_numeral = roman_numeral + numerals[i]
-    end
-    i = i + 1
+
+#ex 4
+def old_roman_numeral num
+  arabics_to_romans = [
+    [1000, 'M']
+    []]
+
+  answer = []
+
+  arabics_to_romans.each do |arabics_to_roman|
+    arabic, roman = arabics_to_roman
+
+    quotient = num arabic
+    next if quotient == 0
+
+    answer.push(roman * quotient)
+    num %= arabic
+    #num = num % arabic
   end
 
-  roman_numeral
+  answer.join
 end
 
 print "Enter the number you want to convert to an old roman numeral: "
 
 puts old_roman_numeral(gets.chomp.to_i)
 
+def old_school_roman_numeral(num)
+  num =
 
+input = ARGV[0].to_i
+
+abort 'Usage: exercise4.rb [1-1000]' unless input.between?(1, 1000)
+
+puts old_school_roman_numeral(input)
+
+#ex5
+
+def modern_roman_numeral(num)
+  arabics_to_romans = [
+    [1000, 'M']
+    [4, 'IV']]
+
+  answer = []
+
+  arabics_to_romans.each do |arabics_to_roman|
+    arabic, roman = arabics_to_roman
+
+    quotient = num arabic
+    next if quotient == 0
+
+    answer.push(roman * quotient)
+    num %= arabic
+    #num = num % arabic
+
+end
+
+input = ARGV[0].to_i
+
+abort 'Usage: exercise5.rb [1-1000]' unless input.between?(1, 1000)
+
+puts modern_roman_numeral(input)
 

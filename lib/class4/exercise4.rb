@@ -28,21 +28,30 @@
 
 # rubocop:disable MethodLength
 def old_school_roman_numeral(num)
-  num = [1, 5, 10, 50, 100, 500, 1000]
-  roman = ['I', 'V', 'x', 'L', 'C', 'D', 'M']
-  roman_numeral = ''
-  i = 0
+  arabic_to_roman = [
+    [1000, 'M'],
+    [500, 'D'],
+    [100,'C'],
+    [50, 'X'],
+    [5, 'V'],
+    [1, 'I']
+  ]
 
-while i <= 6
-  while num <= i
-    num = num - roman[i]
-    roman_numeral = roman_numeral - num[i]
+my_number = []
+
+arabic_to_roman.each do |calc|
+  arabic, roman = calc
+
+if num >= arabic
+
+  if number % num == 1
+     my_number.push(roman)
+
   end
- i = i + 1
-end
 
 input = ARGV[0].to_i
 
 abort 'Usage: exercise4.rb [1-1000]' unless input.between?(1, 1000)
 
 puts old_school_roman_numeral(input)
+end
