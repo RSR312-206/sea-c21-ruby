@@ -27,6 +27,7 @@
 # TIP #3: You only need to change the `old_school_roman_numeral` method.
 
 # rubocop:disable MethodLength
+
 def old_school_roman_numeral(num)
   arabic_to_roman = [
     [1000, 'M'],
@@ -39,15 +40,18 @@ def old_school_roman_numeral(num)
 
 my_number = []
 
+
 arabic_to_roman.each do |calc|
-  arabic, roman = calc
+  arabic = calc[0]
+  roman = calc[1]
 
-if num >= arabic
 
-  if number % num == 1
-     my_number.push(roman)
+loop num
+  num % arabic = remainder
 
-  end
+  my_number.push(remainder * roman)
+  break if remainder == 0
+end
 
 input = ARGV[0].to_i
 
