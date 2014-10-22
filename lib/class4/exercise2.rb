@@ -30,3 +30,22 @@ puts(contents[0].ljust(27) + contents[1].rjust(23))
 puts(contents[2].ljust(27) + contents[3].rjust(23))
 
 puts(contents[4].ljust(27) + contents[5].rjust(23))
+
+hits = [
+['Can I Kick It?', 'A Tribe Called Quest', '1991'],
+['Rump Shaker',    'Wreckx-n-Effect',      '1992'],
+['Check Yo Self',  'Ice Cube',             '1993'],
+['Can I Kick It?', 'A Tribe Called Quest', '1991'],
+['Can I Kick It?', 'A Tribe Called Quest', '1991']
+]
+
+=begin
+hits.each do |hit|
+#destructuring assignmen
+  song, artist, year = hit
+#song = hit[0]
+#artist = hit[1]
+#year = hit[2]
+
+  outs song.ljust(20) + artist.ljust(26) + year.ljust(4)=end
+
