@@ -26,7 +26,7 @@ def database
 end
 
 def load
-  YAML::load(File.read('database.yml'))
+  YAML.load(File.read(database))
 end
 
 records = load

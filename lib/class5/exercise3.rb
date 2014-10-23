@@ -29,10 +29,11 @@ require 'yaml'
 
 def records
   [
-    'Incentivized methodologies', 'Seemless innovation', 'Corporate synergy',
-   'Scalable globalization' , 'Monetized assets']
-   puts records.to_yaml
-
+    'Incentivized methodologies',
+    'Seemless innovation',
+    'Corporate synergy',
+    'Scalable globalization',
+    'Monetized assets']
 end
 
 def database
@@ -40,8 +41,9 @@ def database
 end
 
 def save
-  File.open database, 'w' do |f|
-    f.write records,to_yaml
+  File.open(database, 'w') do |f|
+    f.write records.to_yaml
+  end
 end
 
 save

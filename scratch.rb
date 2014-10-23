@@ -93,6 +93,7 @@ double_this 44
 =end
 
 #ex 1
+=begin
 loop do
   word = gets.chomp
   break of word.empty?
@@ -160,5 +161,4 @@ input = ARGV[0].to_i
 
 abort 'Usage: exercise5.rb [1-1000]' unless input.between?(1, 1000)
 
-puts modern_roman_numeral(input)
-
+puts modern_roman_numeral(input

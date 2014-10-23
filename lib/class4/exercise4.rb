@@ -46,7 +46,7 @@ arabic_to_roman.each do |calc|
   roman = calc[1]
 
 
-loop num
+loop num > arabic
   num % arabic = remainder
 
   my_number.push(remainder * roman)
