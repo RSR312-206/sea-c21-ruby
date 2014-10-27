@@ -161,4 +161,59 @@ input = ARGV[0].to_i
 
 abort 'Usage: exercise5.rb [1-1000]' unless input.between?(1, 1000)
 
-puts modern_roman_numeral(input
+puts modern_roman_numeral(input=end
+
+=end
+
+person = {'name' => 'john', 2 => 40}
+puts person['name']
+puts person[2]
+
+person = ['john', 40]
+
+person.each_with_index do |element, index|
+  puts "#{element} at #{index}"
+end
+
+person = {'name' => 'john', 2 => 40}
+
+person.each do |key, value|
+  puts "#{key}: #{value}"
+end
+
+
+person = ['john', 40]
+person.push('paul')
+person << 72
+
+person = ['john', 40]
+person.unshift('paul')
+
+person = ['john', 40]
+person.insert(1, 'paul')
+
+person = {'name' => 'john', 'age' => 40}
+person['friend'] = 'paul'
+puts person
+
+person = {'name' => 'john'}.merge('age' => 40)
+puts person
+
+name = :john
+
+puts name
+
+name = name.upcase
+
+puts name
+
+name = 'john'
+name.upcase!
+
+puts name
+
+p 'john'.to_sym
+
+
+
+

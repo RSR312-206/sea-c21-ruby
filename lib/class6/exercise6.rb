@@ -22,16 +22,18 @@
 require 'yaml'
 
 def database
-  '/replace/me'
+  File.absolute_path('../database.yml', __FILE__)
 end
 
 def load
-  { replace: 'me' }
+  YAML.load(File.read(database))
 end
 
 def update(key, value)
-  key + value # fix me
+  value = database[key]
 end
+
+
 
 input1, input2 = ARGV
 
@@ -41,3 +43,9 @@ update(input1, input2)
 
 puts "Updated 1 key-value pair in #{database}"
 puts ":#{input1} => #{input2.inspect}"
+
+# person = { 'name' => 'john' }.merge('age' => 40)
+
+# person = { 'name' => 'john', 'age' => 40 }
+# person['friend'] = 'paul'
+# person  #=> { 'name' => 'john', 'age' => 40, 'friend' => 'paul' }
