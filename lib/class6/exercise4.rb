@@ -41,14 +41,14 @@ end
 
 def display(pairs)
   pairs = {
-            :name => 'George Harrison',
-            :age => 58,
-            :song => 'Something',
-            :url => 'https://www.youtube.com/watch?v=UKAp-jRUp2o'
-          }
+    name: 'George Harrison',
+    age: 58,
+    song: 'Something',
+    url: 'https://www.youtube.com/watch?v=UKAp-jRUp2o'
+  }
   pairs.each do |key, value|
-    puts ":#{key} => #{value}"
-  File.write(database, pairs.to_yaml)
+    puts "#{key.inspect} => #{value.inspect}"
+    File.write(database, pairs.to_yaml)
   end
 end
 
