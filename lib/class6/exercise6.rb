@@ -35,7 +35,6 @@ def update(key, value)
   File.write(database, new_hash.to_yaml)
 end
 
-
 input1, input2 = ARGV
 
 abort 'Usage: exercise5.rb KEY VALUE' unless input1 && input2

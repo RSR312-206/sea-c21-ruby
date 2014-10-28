@@ -34,6 +34,7 @@ def remove(key)
   my_hash = load
   new_hash = my_hash.delete(key.to_sym)
   File.write(database, my_hash.to_yaml)
+  new_hash
 end
 
 input = ARGV[0]
