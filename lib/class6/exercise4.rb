@@ -48,6 +48,7 @@ def display(pairs)
           }
   pairs.each do |key, value|
     puts ":#{key} => #{value}"
+  File.write(database, pairs.to_yaml)
   end
 end
 

@@ -30,9 +30,10 @@ def load
 end
 
 def update(key, value)
-  value = database[key]
+  my_hash = load
+  new_hash = my_hash.merge(key.to_sym => value)
+  File.write(database, new_hash.to_yaml)
 end
-
 
 
 input1, input2 = ARGV
