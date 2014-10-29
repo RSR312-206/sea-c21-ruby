@@ -33,34 +33,23 @@
 
 # rubocop:disable MethodLength
 def old_school_roman_numeral(num)
-  arabic_to_roman = [
-    [1000, 'M'],
-    [900 = 'CM'],
-    [500, 'D'],
-    [400 = 'C'],
-    [100,'C'],
-    [90 = 'XC'],
-    [50, 'X'],
-    [ 9 = 'IX'],
-    [5, 'V'],
-    [4 = 'IV']
-    [1, 'I']
-  ]
 
-my_number = []
+  roman_hash = {
+                 1000 => "M",
+                 500  => "D",
+                 100  => "C",
+                 50   => "L",
+                 10   => "X",
+                 5    => "V",
+                 1    => "I"
+               }
 
-
-arabic_to_roman.each do |calc|
-  arabic = calc[0]
-  roman = calc[1]
-
-
-loop num > arabic
-  num % arabic = remainder
-
-  my_number.push(remainder * roman)
-  break if remainder == 0
-
+  roman_hash.keys.each do |key|
+    result = num / key
+    if result > 0
+    puts roman_hash[key] * result
+    num = num - (key * result)
+  end
 end
 
 input = ARGV[0].to_i

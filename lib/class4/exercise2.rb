@@ -38,14 +38,3 @@ hits = [
 ['Can I Kick It?', 'A Tribe Called Quest', '1991'],
 ['Can I Kick It?', 'A Tribe Called Quest', '1991']
 ]
-
-=begin
-hits.each do |hit|
-#destructuring assignmen
-  song, artist, year = hit
-#song = hit[0]
-#artist = hit[1]
-#year = hit[2]
-
-  outs song.ljust(20) + artist.ljust(26) + year.ljust(4)=end
-

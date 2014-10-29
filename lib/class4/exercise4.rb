@@ -29,28 +29,22 @@
 # rubocop:disable MethodLength
 
 def old_school_roman_numeral(num)
-  arabic_to_roman = [
-    [1000, 'M'],
-    [500, 'D'],
-    [100,'C'],
-    [50, 'X'],
-    [5, 'V'],
-    [1, 'I']
-  ]
 
-my_number = []
-
-
-arabic_to_roman.each do |calc|
-  arabic = calc[0]
-  roman = calc[1]
-
-
-loop num > arabic
-  num % arabic = remainder
-
-  my_number.push(remainder * roman)
-  break if remainder == 0
+  roman_hash = {
+                 1000 => "M",
+                 500  => "D",
+                 100  => "C",
+                 50   => "L",
+                 10   => "X",
+                 5    => "V",
+                 1    => "I"
+               }
+  roman_hash.keys.each do |key|
+    result = num / key
+    if result > 0
+    puts roman_hash[key] * result
+    num = num - (key * result)
+  end
 end
 
 input = ARGV[0].to_i
@@ -59,3 +53,4 @@ abort 'Usage: exercise4.rb [1-1000]' unless input.between?(1, 1000)
 
 puts old_school_roman_numeral(input)
 end
+
