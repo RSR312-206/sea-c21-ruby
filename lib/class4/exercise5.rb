@@ -36,16 +36,21 @@ def old_school_roman_numeral(num)
 
   roman_hash = {
                  1000 => "M",
+                 900  => 'CM',
                  500  => "D",
+                 400  => 'CD',
                  100  => "C",
+                 90   => 'XC',
                  50   => "L",
+                 40   => 'XL',
                  10   => "X",
                  5    => "V",
+                 4    => 'IV'
                  1    => "I"
                }
 
   roman_hash.keys.each do |key|
-    result = num / key
+    result = num / keyclear
     if result > 0
     puts roman_hash[key] * result
     num = num - (key * result)
