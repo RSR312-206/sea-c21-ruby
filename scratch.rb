@@ -215,5 +215,16 @@ puts name
 p 'john'.to_sym
 
 
+def fruit=(fruit)
+  @fruit = fruit
+end
+#is equal to
+attr_accessor :fruit
 
+
+tree.fruit = 1_000_000
+
+#reader, and writer, literally create methods inside the class.
+
+#pick! means it's mutable. ! (bang is a perminantly changes the objct)
 
