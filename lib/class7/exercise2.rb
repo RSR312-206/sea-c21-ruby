@@ -17,5 +17,14 @@
 
 # rubocop:disable TrivialAccessors
 class OrangeTree
-  # fix me
+  def initialize
+    fruit
+  end
+
+  def fruit
+    @fruit = 50
+  end
 end
+
+orange_tree = OrangeTree.new
+puts orange_tree.fruit
