@@ -22,6 +22,6 @@
 
 class Array
   def each_without_yolo(&block)
-    block # fix me
+    block.each do
   end
 end

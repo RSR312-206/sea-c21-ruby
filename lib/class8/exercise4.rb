@@ -19,13 +19,13 @@
 
 def follow_the_execution(method_param1, method_param2, &block)
   puts 'Executing the method'
-  puts "method_param is #{method_param1}"
-  puts "method_param is #{method_param2}"
-  method_param1 && method_param2 && block.call('lunch', 'tacos')
+  puts "method_param1 is #{method_param1}"
+  puts "method_param2 is #{method_param2}"
+  block.call('lunch', 'tacos')
 end
 
 follow_the_execution('dinner', 'soup') do |block_param1, block_param2|
   puts 'Executing the block'
-  puts "block_param is #{block_param1}"
-  puts "block_param is #{block_param2}"
+  puts "block_param1 is #{block_param1}"
+  puts "block_param2 is #{block_param2}"
 end
