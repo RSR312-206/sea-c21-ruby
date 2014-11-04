@@ -40,12 +40,6 @@ def load
 end
 
 def display(pairs)
-  pairs = {
-    name: 'George Harrison',
-    age: 58,
-    song: 'Something',
-    url: 'https://www.youtube.com/watch?v=UKAp-jRUp2o'
-  }
   pairs.each do |key, value|
     puts "#{key.inspect} => #{value.inspect}"
     File.write(database, pairs.to_yaml)
