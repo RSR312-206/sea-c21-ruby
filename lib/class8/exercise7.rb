@@ -25,8 +25,8 @@ class Array
     each do |element|
       if element.upcase == 'YOLO'
         block.call('Life is too short')
-    else
-      block.call(element)
+      else
+        block.call(element)
       end
     end
   end
