@@ -44,12 +44,14 @@
 #     end
 #
 #     1.plus_forty_two  #=> 43
-# rubocop:disable MethodLength
+
 class Integer
   def hours_in_seconds
     self * 60 * 60
   end
 end
+
+24.hours_in_seconds
 
 class String
   def indent(amount = 2)
@@ -57,7 +59,10 @@ class String
   end
 end
 
+'foo'.indent(3)
+
 class Integer
+  # rubocop:disable MethodLength
   def to_roman
     arabics_to_romans = [
       [1000, 'M'],
@@ -87,9 +92,8 @@ class Integer
       answer.push(roman * quotient)
       num %= arabic
     end
+    answer.join
   end
-
-  answer.join
 end
 
 class Array

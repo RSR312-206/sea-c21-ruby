@@ -37,14 +37,13 @@
 #     ['cat', 'bird'].sort  #=> ['bird', 'cat']
 
 fruits = []
-input = ' '
-puts 'Give me some words, and I will sort them:'
+input = nil
+puts 'Type some words to be sorted alphabetically:'
 
 while input != ''
   input = gets.chomp
   fruits.push(input)
 end
 
-puts 'Sweet! Here they are, sorted:'
-
+puts 'Sweet! Here they are in alphabetical order:'
 puts fruits.sort

@@ -33,7 +33,7 @@
 # TIP #2: Use `return` to preemptively exit the `ask` method.
 
 def ask(question)
- loop do
+  loop do
     puts question
 
     answer = gets.chomp
@@ -41,7 +41,7 @@ def ask(question)
     return 'We can be friends!' if answer == 'y'
     return 'Get out of my sight!' if answer == 'n'
 
-    puts 'Try Again'
+    puts 'Try again'
   end
 end
 

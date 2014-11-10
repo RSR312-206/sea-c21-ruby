@@ -33,32 +33,35 @@
 
 # rubocop:disable MethodLength
 def old_school_roman_numeral(num)
+  conversion = ''
 
-  roman_hash = {
-                 1000 => "M",
+  roman_hash = { 1000 => 'M',
                  900  => 'CM',
-                 500  => "D",
+                 500  => 'D',
                  400  => 'CD',
-                 100  => "C",
+                 100  => 'C',
                  90   => 'XC',
-                 50   => "L",
+                 50   => 'L',
                  40   => 'XL',
-                 10   => "X",
-                 5    => "V",
-                 4    => 'IV'
-                 1    => "I"
+                 10   => 'X',
+                 9    => 'IX',
+                 5    => 'V',
+                 4    => 'IV',
+                 1    => 'I'
                }
 
   roman_hash.keys.each do |key|
-    result = num / keyclear
+    result = num / key
     if result > 0
-    puts roman_hash[key] * result
-    num = num - (key * result)
+      conversion += (roman_hash[key] * result)
+      num -= (key * result)
+    end
   end
+  conversion
 end
 
 input = ARGV[0].to_i
 
-abort 'Usage: exercise5.rb [1-1000]' unless input.between?(1, 1000)
+abort 'Usage: exercise4.rb [1-1000]' unless input.between?(1, 1000)
 
-puts modern_roman_numeral(input)
+puts old_school_roman_numeral(input)

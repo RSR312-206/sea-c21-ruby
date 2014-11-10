@@ -18,23 +18,15 @@
 #
 # TIP #3: The width of each line is 50 characters.
 
-puts('Table of Contents'.center(50))
-
-contents = [
-  'Chapter 1:  Getting Started', 'page  1',
-  'Chapter 2:  Numbers', 'page  9', 'Chapter 3:  Letters', 'page 13'
-]
-
-puts(contents[0].ljust(27) + contents[1].rjust(23))
-
-puts(contents[2].ljust(27) + contents[3].rjust(23))
-
-puts(contents[4].ljust(27) + contents[5].rjust(23))
-
 hits = [
-['Can I Kick It?', 'A Tribe Called Quest', '1991'],
-['Rump Shaker',    'Wreckx-n-Effect',      '1992'],
-['Check Yo Self',  'Ice Cube',             '1993'],
-['Can I Kick It?', 'A Tribe Called Quest', '1991'],
-['Can I Kick It?', 'A Tribe Called Quest', '1991']
+  ['Can I Kick It?', 'A Tribe Called Quest', '1991'],
+  ['Rump Shaker',    'Wreckx-n-Effect',      '1992'],
+  ['Check Yo Self',  'Ice Cube',             '1993'],
+  ['Regulate',       'Warren G & Nate Dogg', '1994'],
+  ['I Got 5 On It',  'Luniz',                '1995'],
+  ['Ready Or Not',   'The Fugees',           '1996']
 ]
+
+hits.each do |song, name, year|
+  puts song.ljust(20) + name.ljust(26) + year.rjust(4)
+end
